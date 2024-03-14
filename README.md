@@ -3,6 +3,8 @@
 BattleRoyale is a custom PvP game-mode mod for [Zumbi Blocks 2](https://store.steampowered.com/app/1941780/Zumbi_Blocks_2_Open_Alpha/).  
 *Despite being named BattleRoyale, it's not actually a Battle Royale mode.*
 
+https://github.com/nyawoi/BattleRoyale/assets/106277673/16871d98-8ce0-4345-828e-c212f9a6edfe
+
 ## Main Features
 
 - Implements PvP (Player vs Player)
