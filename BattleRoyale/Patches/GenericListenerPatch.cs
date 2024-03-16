@@ -23,6 +23,7 @@ public static class GenericListenerPatch
         var playerLobbyId = ___readBuffer.GetInt();
         var amount = ___readBuffer.GetFloat();
         var dmg = new Damage(amount);
+        dmg.stagger.staggerPackID = StaggerPack.ID.None;
 
         BattleRoyale.Logger.LogDebug($"Server received {amount} DMG dealt to {playerLobbyId}");
         
