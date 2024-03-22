@@ -7,8 +7,9 @@ public static class ShotPatch
 {
     [HarmonyPrefix]
     [HarmonyPatch(nameof(Shot.SetupFirstStep))]
-    public static void RemoveStagger(Damage dmg)
+    public static void RemoveStagger(Shot __instance, Damage dmg)
     {
         dmg.stagger.staggerPackID = StaggerPack.ID.None;
+        __instance.alreadyHitTarget.Add(dmg.sourcePlayer);
     }
 }
