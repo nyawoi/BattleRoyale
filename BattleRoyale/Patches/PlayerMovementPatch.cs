@@ -9,6 +9,6 @@ public static class PlayerMovementPatch
     [HarmonyPatch(nameof(PlayerMovement.TryStagger))]
     public static bool DisableStaggering()
     {
-        return true;
+        return false;
     }
 }
