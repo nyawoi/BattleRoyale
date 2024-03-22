@@ -26,7 +26,15 @@ public static class PlayerMainPatch
     [HarmonyPatch(nameof(PlayerMain.TakeDamage))]
     public static bool SynchronizeDamage(PlayerMain __instance, ref Damage dmg)
     {
-        if (MultiplayerController.instance.IsServer() || !__instance.ForeignPlayer) return true;
+        BattleRoyale.Logger.LogDebug($"Player {(__instance.ForeignPlayer ? "foreign": "local")} with lobbyID of {__instance.lobbyPlayer.lobbyID} took damage");
+
+        if (MultiplayerController.instance.IsServer() || !__instance.ForeignPlayer)
+        {
+            BattleRoyale.Logger.LogDebug($"(client) IsServer: {MultiplayerController.instance.IsServer()}, (hit player) ForeignPlayer: {__instance.ForeignPlayer}");
+            return true;
+        }
+        
+        BattleRoyale.Logger.LogDebug("Client is not the server host and hit player is not local");
         
         BattleRoyale.SendPlayerDamage(dmg, __instance.lobbyPlayer.lobbyID);
         
