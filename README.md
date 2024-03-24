@@ -13,6 +13,7 @@ BattleRoyale is a custom PvP game-mode mod for [Zumbi Blocks 2](https://store.st
 - Zombies are disabled
 - In-game player names and icons are disabled
 - Weapons and players are no longer visible on the map
+- Adds unreleased weapons to the loot pool
 
 ### Other Changes
 
