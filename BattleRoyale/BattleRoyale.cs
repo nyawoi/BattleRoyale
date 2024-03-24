@@ -11,7 +11,7 @@ public class BattleRoyale : BaseUnityPlugin
     public const string PluginGUID = "AetharNet.Mods.ZumbiBlocks2.BattleRoyale";
     public const string PluginAuthor = "awoi";
     public const string PluginName = "BattleRoyale";
-    public const string PluginVersion = "0.2.2";
+    public const string PluginVersion = "0.3.0";
 
     public new static ManualLogSource Logger;
 
@@ -22,7 +22,7 @@ public class BattleRoyale : BaseUnityPlugin
         Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly());
     }
     
-    internal const byte CustomPackageByte = 255;
+    internal const byte CustomPackageByte = 254;
     internal const byte PlayerDamagePackageByte = 0;
     
     internal static void SendPlayerDamage(Damage dmg, int playerLobbyId)
